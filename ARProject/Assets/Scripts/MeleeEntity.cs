@@ -8,10 +8,4 @@ public class MeleeEntity : Entity
         Debug.Log(entitySO.entityName + " attacked " + entity.GetEntitySO().entityName + " for " + entitySO.damage + " damage");
         entity.TakeDamage(entitySO.damage);
     }
-
-    public void OnTriggerEnter(Collider other) {
-        if (other.gameObject.TryGetComponent<Entity>(out Entity otherEntity)) {
-            Attack(otherEntity);
-        }
-    }
 }

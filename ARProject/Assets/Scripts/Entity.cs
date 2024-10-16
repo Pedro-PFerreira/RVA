@@ -7,15 +7,30 @@ public class Entity : MonoBehaviour {
     [SerializeField] protected EntitySO entitySO;
     private SphereCollider attackRangeCollider;
     private int health;
+    private Entity target;
+    private float attackTimer;
     
     public void Awake() {
         attackRangeCollider = gameObject.GetComponent<SphereCollider>();
+        attackTimer = 0;
     }
 
     
     public void Start() {
         health = entitySO.maxHealth;
         attackRangeCollider.radius = entitySO.attackRange;
+    }
+
+    public void Update() {
+        if (target != null) {
+            // There is a target in range
+            if (attackTimer <= 0) {
+                Attack(target);
+                attackTimer = entitySO.attackCooldown;
+            } else {
+                attackTimer -= Time.deltaTime;
+            }
+        }
     }
 
     public virtual void Attack(Entity entity) {
@@ -33,6 +48,18 @@ public class Entity : MonoBehaviour {
     public void Die() {
         Debug.Log(entitySO.entityName + " died");
         Destroy(gameObject);
+    }
+
+    public void OnTriggerEnter(Collider other) {
+        if (other.gameObject.TryGetComponent<Entity>(out Entity otherEntity)) {
+            target = otherEntity;
+        }
+    }
+
+    public void OnTriggerExit(Collider other) {
+        if (other.gameObject.TryGetComponent<Entity>(out Entity otherEntity)) {
+            target = null;
+        }
     }
 
     public EntitySO GetEntitySO() {
