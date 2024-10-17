@@ -7,34 +7,33 @@ public class Entity : MonoBehaviour {
     [SerializeField] protected EntitySO entitySO;
     private SphereCollider attackRangeCollider;
     private int health;
-    private Entity target;
+    protected Entity target;
     private float attackTimer;
-    
+
     public void Awake() {
         attackRangeCollider = gameObject.GetComponent<SphereCollider>();
         attackTimer = 0;
     }
 
-    
+
     public void Start() {
         health = entitySO.maxHealth;
         attackRangeCollider.radius = entitySO.attackRange;
     }
 
     public void Update() {
-        if (target != null) {
-            // There is a target in range
-            if (attackTimer <= 0) {
-                Attack(target);
-                attackTimer = entitySO.attackCooldown;
-            } else {
-                attackTimer -= Time.deltaTime;
-            }
+        // There is a target in range
+        if (attackTimer <= 0) {
+            Attack();
+            attackTimer = entitySO.attackCooldown;
+        } else {
+            attackTimer -= Time.deltaTime;
         }
+
     }
 
-    public virtual void Attack(Entity entity) {
-        Debug.LogError("Attack method not implemented");
+    public virtual void Attack() {
+        Debug.Log("Attack in base class Entity");
     }
 
     public void TakeDamage(int damage) {
@@ -53,6 +52,11 @@ public class Entity : MonoBehaviour {
     public void OnTriggerEnter(Collider other) {
         if (other.gameObject.TryGetComponent<Entity>(out Entity otherEntity)) {
             target = otherEntity;
+        } else if (other.gameObject.TryGetComponent<Projectile>(out Projectile projectile)) {
+            if (projectile.GetThrower() != this) {
+                TakeDamage(projectile.GetThrower().GetEntitySO().damage);
+                Destroy(projectile.gameObject);
+            }
         }
     }
 

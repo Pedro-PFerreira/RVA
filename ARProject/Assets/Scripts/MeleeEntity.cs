@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MeleeEntity : Entity
 {
-    public override void Attack(Entity entity) {
-        Debug.Log(entitySO.entityName + " attacked " + entity.GetEntitySO().entityName + " for " + entitySO.damage + " damage");
-        entity.TakeDamage(entitySO.damage);
+    public override void Attack() {
+        if (target == null) return;
+        
+        Debug.Log(entitySO.entityName + " attacked " + target.GetEntitySO().entityName + " for " + entitySO.damage + " damage");
+        target.TakeDamage(entitySO.damage);
     }
 }
