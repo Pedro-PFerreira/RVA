@@ -32,11 +32,8 @@ public class ImageTracker : MonoBehaviour
         // Object creation
         foreach (var trackedImage in eventArgs.added)
         {
-            Debug.Log("Tracked Image added: " + trackedImage.referenceImage.name);
             foreach (var arPrefab in ARPrefabs)
             {
-                Debug.Log("Checking prefab: " + arPrefab.name);
-
                 if (trackedImage.referenceImage.name == arPrefab.name)
                 {
                     Debug.Log("Matching prefab found: " + arPrefab.name);
@@ -45,7 +42,6 @@ public class ImageTracker : MonoBehaviour
                     arObject.transform.rotation = trackedImage.transform.rotation;
                     arObject.transform.SetParent(trackedImage.transform, true);
                     ARObjects.Add(arObject);
-                    Debug.Log("Prefab instantiated and added: " + arPrefab.name);
                 }
             }
         }
@@ -53,21 +49,33 @@ public class ImageTracker : MonoBehaviour
         // Object position tracking
         foreach (var trackedImage in eventArgs.updated)
         {
-            Debug.Log("Tracked Image updated: " + trackedImage.name);
             foreach (var gameObject in ARObjects)
             {
                 if (gameObject.name == trackedImage.referenceImage.name)
                 {
-                    Debug.Log("Tracking state: " + trackedImage.trackingState);
                     gameObject.SetActive(trackedImage.trackingState == TrackingState.Tracking);
                     if (trackedImage.trackingState == TrackingState.Tracking)
                     {
                         gameObject.transform.position = trackedImage.transform.position;
                         gameObject.transform.rotation = trackedImage.transform.rotation;
-                        Debug.Log("Position updated for: " + gameObject.name);
                     }
                 }
             }
         }
+
+        // Object deletion
+        foreach (var trackedImage in eventArgs.removed)
+        {
+            foreach (var gameObject in ARObjects)
+            {
+                if (gameObject.name == trackedImage.referenceImage.name)
+                {
+                    ARObjects.Remove(gameObject);
+                    Destroy(gameObject);
+                }
+            }
+        }
+
+
     }
 }

@@ -45,7 +45,8 @@ public class Entity : MonoBehaviour {
 
     public void Die() {
         Debug.Log(entitySO.entityName + " died");
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public EntitySO GetEntitySO() {

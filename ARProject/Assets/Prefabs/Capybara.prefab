@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6771065349845238891
+--- !u!1001 &604011931225701746
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1623505898165921896}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1af93a20dba198a4da522ec9f6df45c8,
         type: 3}
@@ -31,12 +31,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1af93a20dba198a4da522ec9f6df45c8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03
+      value: -0.0032499998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1af93a20dba198a4da522ec9f6df45c8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.00007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1af93a20dba198a4da522ec9f6df45c8,
         type: 3}
@@ -81,10 +81,126 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1af93a20dba198a4da522ec9f6df45c8,
         type: 3}
       propertyPath: m_Name
-      value: Capybara
+      value: Skin_Cabybara
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1af93a20dba198a4da522ec9f6df45c8, type: 3}
+--- !u!4 &1147108231046453913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1af93a20dba198a4da522ec9f6df45c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 604011931225701746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7059171520628608749
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1085678710032273829, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_Name
+      value: Capybara
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250093161584153441, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.22008029
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250093161584153441, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.07263989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250093161584153441, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250093161584153441, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.062869176
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250093161584153441, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064222255065012570, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: entitySO
+      value: 
+      objectReference: {fileID: 11400000, guid: a4257ed9f0d5b0743ae3946a5b58ade2,
+        type: 2}
+    - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 8781246967110538412, guid: 405cdecc828c112428df605f6cc60812, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1147108231046453913}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 405cdecc828c112428df605f6cc60812, type: 3}
+--- !u!4 &1623505898165921896 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
+    type: 3}
+  m_PrefabInstance: {fileID: 7059171520628608749}
+  m_PrefabAsset: {fileID: 0}
