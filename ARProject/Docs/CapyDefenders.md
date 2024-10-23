@@ -19,11 +19,11 @@ In order to develop the game, it was used Unity and AR Foundation plug-ins to cr
 The majority of the game models were imported from the Web, such as the golden and soldier capybaras, and the stegossaurus. The models created by the group were the wizard hat, the tornado, and the lightning.
 The imported models can be found in the following links:
 
-- Golden Capybara: 
+- Golden Capybara: https://sketchfab.com/3d-models/capybara-by-ao-inomata-3e8ec79c8666456d9aeb747d722f6c48
 
 - Capybara Soldier: https://sketchfab.com/3d-models/stumble-guys-capybara-f807a741b81f4740b2178e9302a2a726
 
-- Stegossaurus: 
+- Stegossaurus: https://sketchfab.com/3d-models/stego-b07eb05fa95c413bb928eb2ffbdc9523
 
 ## How to execute the project
 
@@ -32,7 +32,7 @@ The imported models can be found in the following links:
 
 #TODO - Update this section with images.
 
-- The player can place troopers and spells up to 4 at a time, by using the respective markers;
+- The player can place troopers and spells up to 3 at a time, by using the respective markers;
 
 - The player can rotate the camera and see the game from different angles, by rotating the device;
 
