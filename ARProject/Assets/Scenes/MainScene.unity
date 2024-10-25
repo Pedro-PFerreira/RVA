@@ -665,6 +665,7 @@ MonoBehaviour:
   ARPrefabs:
   - {fileID: 9030670888721131543, guid: f2722f5fba9d40d46b3401bb59131b3a, type: 3}
   - {fileID: 7991123036385501000, guid: 3fc4ccd5ee82a29408a68c188f667e17, type: 3}
+  - {fileID: 9077680766680155581, guid: 501bf67c4bdac1b4faa75b9314228d6f, type: 3}
 --- !u!1 &1422229470
 GameObject:
   m_ObjectHideFlags: 0
