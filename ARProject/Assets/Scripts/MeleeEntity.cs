@@ -26,6 +26,7 @@ public class MeleeEntity : Entity
         foreach (Collider hit in hits) {
             if (hit.TryGetComponent<Entity>(out Entity otherEntity)) {
                 if (otherEntity == this) continue;
+                if (!(this.IsEnemy() ^ otherEntity.IsEnemy())) continue;
                 target = otherEntity;
                 break;
             }

@@ -15,6 +15,6 @@ MonoBehaviour:
   entityName: Capybara
   maxHealth: 50
   damage: 40
-  speed: 0
+  speed: 2
   attackRange: 1000000
   attackCooldown: 2
