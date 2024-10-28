@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3378035451771567698}
   - component: {fileID: 3127185288555771535}
   - component: {fileID: 2917556028527014195}
+  - component: {fileID: 6328681819763377444}
+  - component: {fileID: 760328271824828930}
   m_Layer: 0
   m_Name: Lightning
   m_TagString: Untagged
@@ -111,3 +113,39 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &6328681819763377444
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9077680766680155581}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.6596255
+  m_Height: 6.5606985
+  m_Direction: 1
+  m_Center: {x: 0.5880921, y: 2.2017365, z: 0.38527465}
+--- !u!114 &760328271824828930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9077680766680155581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16f8c6f6ed78d149b4baed197ffd6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellSO: {fileID: 11400000, guid: 50f09d729ad826249abeb83e618d0fb0, type: 2}
