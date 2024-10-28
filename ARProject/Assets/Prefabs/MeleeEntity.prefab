@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8606639592175642245}
   - component: {fileID: 8064222255065012570}
-  - component: {fileID: 5250093161584153441}
+  - component: {fileID: 972381529033350828}
   - component: {fileID: 6950833675708528965}
   m_Layer: 3
   m_Name: MeleeEntity
@@ -142,8 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entitySO: {fileID: 11400000, guid: 3167fb6ff3b650c4ea2f4cf797c66008, type: 2}
   isEnemy: 0
---- !u!136 &5250093161584153441
-CapsuleCollider:
+--- !u!65 &972381529033350828
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -160,11 +160,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.054936, z: 1}
+  m_Center: {x: 0, y: -0.006762445, z: 0}
 --- !u!54 &6950833675708528965
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -174,8 +172,8 @@ Rigidbody:
   m_GameObject: {fileID: 1085678710032273829}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 3.4028235e+38
+  m_AngularDrag: 3.4028235e+38
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}

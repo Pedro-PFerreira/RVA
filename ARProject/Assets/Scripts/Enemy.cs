@@ -5,13 +5,14 @@ public class Enemy : MonoBehaviour {
     private Transform defensePoint;
     private Entity entity;
     private Rigidbody rb;
+    private Entity target;
+
+    private bool isAttacking = false;
 
     void Awake() {
-        // Cache components
         entity = GetComponent<Entity>();
         rb = GetComponent<Rigidbody>();
 
-        // Initialize the defense point
         GameObject defensePointObject = GameObject.FindGameObjectWithTag("DefensePoint");
         if (defensePointObject != null) {
             defensePoint = defensePointObject.transform;
@@ -21,38 +22,64 @@ public class Enemy : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        MoveTowardsDefensePoint();
+        MoveTowardsTarget();
     }
 
-    private void MoveTowardsDefensePoint() {
+    private void MoveTowardsTarget() {
         if (defensePoint == null || entity == null) return;
 
-        Vector3 direction = (defensePoint.position - transform.position).normalized;
-        float speed = entity.GetEntitySO().speed; // Get speed from the EntitySO
+        if (isAttacking) {
+            if (IsAtDefensePoint()) {
+                AttackDefensePoint();
+            } else {
+                MoveTowards(defensePoint);
+            }
+        } else {
+            CheckForEntitiesInRange();
 
-        if (CanMoveTowardsDefensePoint(direction, speed)) {
+            if (target != null) {
+                MoveTowards(target.transform);
+            } else {
+                MoveTowards(defensePoint);
+            }
+        }
+    }
+
+    private void MoveTowards(Transform targetTransform) {
+        Vector3 direction = (targetTransform.position - transform.position).normalized;
+        float speed = entity.GetEntitySO().speed;
+
+        if (!Physics.Raycast(transform.position, direction, speed * Time.fixedDeltaTime)) {
             rb.MovePosition(transform.position + direction * speed * Time.fixedDeltaTime);
-        } else if (IsAtDefensePoint(direction, speed)) {
+        } else if (IsAtDefensePoint()) {
             OnReachDefensePoint();
         }
     }
 
-    private bool CanMoveTowardsDefensePoint(Vector3 direction, float speed) {
-        // Check if the enemy can move towards the defense point
-        return !Physics.Raycast(transform.position, direction, speed * Time.fixedDeltaTime);
+    private void CheckForEntitiesInRange() {
+        target = null;
+
+        Collider[] hits = Physics.OverlapSphere(transform.position, entity.GetEntitySO().attackRange, LayerMask.GetMask("Entities"));
+
+        foreach (Collider hit in hits) {
+            if (hit.TryGetComponent<Entity>(out Entity otherEntity)) {
+                if (otherEntity == this) continue;
+                if (!(entity.IsEnemy() ^ otherEntity.IsEnemy())) continue; // Ensure it's an enemy
+                target = otherEntity;
+                break;
+            }
+        }
     }
 
-    private bool IsAtDefensePoint(Vector3 direction, float speed) {
-        // Check if the enemy is at the DefensePoint
-        return Physics.Raycast(transform.position, direction, out RaycastHit hit, speed * Time.fixedDeltaTime) && hit.transform.CompareTag("DefensePoint");
+    private bool IsAtDefensePoint() {
+        return Physics.Raycast(transform.position, (defensePoint.position - transform.position).normalized, out RaycastHit hit, 0.1f) && hit.transform.CompareTag("DefensePoint");
+    }
+
+    private void AttackDefensePoint() {
+        // Implement the logic for attacking the DefensePoint here
     }
 
     private void OnReachDefensePoint() {
-        // Optional: Implement behavior when reaching the DefensePoint (e.g., attacking)
-        Debug.Log("Enemy has reached the DefensePoint!");
-    }
-
-    public Entity GetEntity() {
-        return entity;
+        isAttacking = true;
     }
 }

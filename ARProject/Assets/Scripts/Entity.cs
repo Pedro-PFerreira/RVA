@@ -18,6 +18,7 @@ public class Entity : MonoBehaviour {
 
     public void Awake() {
         attackTimer = 0;
+        GetComponent<Rigidbody>().isKinematic = true;
     }
 
 

@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8606639592175642245}
   - component: {fileID: -5216770671674391683}
-  - component: {fileID: 4965269526780359636}
+  - component: {fileID: 6524252777622941445}
   - component: {fileID: 4534309139521254184}
   m_Layer: 3
   m_Name: RangedEntity
@@ -130,8 +130,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6072770913089041129}
   projectileSpawnPoint: {fileID: 1093183851006920315}
   projectileSpeed: 0.01
---- !u!136 &4965269526780359636
-CapsuleCollider:
+--- !u!65 &6524252777622941445
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,10 +148,8 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.0253167, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4534309139521254184
 Rigidbody:

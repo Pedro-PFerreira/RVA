@@ -47,10 +47,10 @@ public class EnemySpawner : MonoBehaviour {
     IEnumerator SpawnMonsters() {
         for (int i = 0; i < monsterCount; i++) {
             GameObject selectedEnemy = GetRandomEnemy(); // Get a random enemy based on weight
-            selectedEnemy.AddComponent<Enemy>();
-            selectedEnemy.GetComponent<Entity>().SetEnemy(true);
             int spawnIndex = i % spawnPoints.Length; // Cycle through spawn points
-            Instantiate(selectedEnemy, spawnPoints[spawnIndex].position, Quaternion.identity);
+            GameObject instance = Instantiate(selectedEnemy, spawnPoints[spawnIndex].position, Quaternion.identity);
+            instance.AddComponent<Enemy>();
+            instance.GetComponent<Entity>().SetEnemy(true);
 
             yield return new WaitForSeconds(spawnDelay); // Wait before spawning the next monster
         }
