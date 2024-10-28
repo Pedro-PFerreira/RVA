@@ -37,3 +37,13 @@ MonoBehaviour:
     m_SpecifySize: 0
     m_Name: Capybara
     m_Texture: {fileID: 2800000, guid: 1b185297d715b4c4f92d6649d12b47fe, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5676542565215926480
+      m_GuidHigh: 13470217677278813845
+    m_SerializedTextureGuid:
+      m_GuidLow: 501126644408177188
+      m_GuidHigh: 16011914138072186120
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Lightning
+    m_Texture: {fileID: 2800000, guid: 2b6ed2245c0706f408fdd8e512bf35de, type: 3}
