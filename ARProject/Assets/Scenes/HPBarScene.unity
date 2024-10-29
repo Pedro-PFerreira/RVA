@@ -222,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 19849000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36724228, y: -1.594884, z: -7.17}
+  m_LocalPosition: {x: -3.43, y: -1.594884, z: -21.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -359,10 +359,15 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.0000001
       objectReference: {fileID: 0}
+    - target: {fileID: 1209829962673979641, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.94
+      value: 7.03
       objectReference: {fileID: 0}
     - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
         type: 3}
@@ -372,7 +377,7 @@ PrefabInstance:
     - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.95
+      value: -8.33
       objectReference: {fileID: 0}
     - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
         type: 3}
@@ -477,6 +482,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 1085678710032273829, guid: 1192d1e4ffc54dd418eb5752a0bd366f,
+        type: 3}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[0].spawnWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[1].spawnWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[2].spawnWeight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7931616901702309843, guid: 6187536434f136c4fac4ce9f8d06ef17,
         type: 3}

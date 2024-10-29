@@ -1,17 +1,18 @@
 using UnityEngine;
+using UnityEngine.AI;
 
-[RequireComponent(typeof(Rigidbody), typeof(Entity))]
+[RequireComponent(typeof(Rigidbody), typeof(Entity), typeof(NavMeshAgent))]
 public class Enemy : MonoBehaviour {
     private Transform defensePoint;
     private Entity entity;
-    private Rigidbody rb;
+    private NavMeshAgent navMeshAgent;
     private Entity target;
 
     private bool isAttacking = false;
 
     void Awake() {
         entity = GetComponent<Entity>();
-        rb = GetComponent<Rigidbody>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
 
         GameObject defensePointObject = GameObject.FindGameObjectWithTag("DefensePoint");
         if (defensePointObject != null) {
@@ -21,19 +22,10 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    void FixedUpdate() {
-        MoveTowardsTarget();
-    }
-
-    private void MoveTowardsTarget() {
-        if (defensePoint == null || entity == null) return;
-
+    void Update() {
         if (isAttacking) {
-            if (IsAtDefensePoint()) {
-                AttackDefensePoint();
-            } else {
-                MoveTowards(defensePoint);
-            }
+            AttackDefensePoint();
+            LookTowards(defensePoint.position - transform.position);
         } else {
             CheckForEntitiesInRange();
 
@@ -46,40 +38,34 @@ public class Enemy : MonoBehaviour {
     }
 
     private void MoveTowards(Transform targetTransform) {
-        Vector3 direction = (targetTransform.position - transform.position).normalized;
-        float speed = entity.GetEntitySO().speed;
+        if (targetTransform != null && navMeshAgent.isOnNavMesh) {
+            navMeshAgent.SetDestination(targetTransform.position);
+            LookTowards(targetTransform.position - transform.position);
+        }
+    }
 
-        if (!Physics.Raycast(transform.position, direction, speed * Time.fixedDeltaTime)) {
-            rb.MovePosition(transform.position + direction * speed * Time.fixedDeltaTime);
-        } else if (IsAtDefensePoint()) {
-            OnReachDefensePoint();
+    private void LookTowards(Vector3 direction) {
+        if (direction != Vector3.zero) {
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
         }
     }
 
     private void CheckForEntitiesInRange() {
         target = null;
-
         Collider[] hits = Physics.OverlapSphere(transform.position, entity.GetEntitySO().attackRange, LayerMask.GetMask("Entities"));
 
         foreach (Collider hit in hits) {
             if (hit.TryGetComponent<Entity>(out Entity otherEntity)) {
                 if (otherEntity == this) continue;
-                if (!(entity.IsEnemy() ^ otherEntity.IsEnemy())) continue; // Ensure it's an enemy
+                if (!(entity.IsEnemy() ^ otherEntity.IsEnemy())) continue;
                 target = otherEntity;
                 break;
             }
         }
     }
 
-    private bool IsAtDefensePoint() {
-        return Physics.Raycast(transform.position, (defensePoint.position - transform.position).normalized, out RaycastHit hit, 0.1f) && hit.transform.CompareTag("DefensePoint");
-    }
-
     private void AttackDefensePoint() {
-        // Implement the logic for attacking the DefensePoint here
-    }
-
-    private void OnReachDefensePoint() {
-        isAttacking = true;
+        Debug.Log("Enemy is attacking the DefensePoint!");
     }
 }

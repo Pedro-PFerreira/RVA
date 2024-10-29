@@ -2,10 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 
 public class Entity : MonoBehaviour {
-
     public event EventHandler<OnHPChangedEventArgs> OnHPChanged;
     public class OnHPChangedEventArgs : EventArgs {
         public float hpNormalized;
@@ -14,13 +13,19 @@ public class Entity : MonoBehaviour {
     [SerializeField] protected EntitySO entitySO;
     private int health;
     private float attackTimer;
+    private NavMeshAgent navMeshAgent;
     public bool isEnemy = false;
 
     public void Awake() {
         attackTimer = 0;
         GetComponent<Rigidbody>().isKinematic = true;
-    }
 
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        if (navMeshAgent != null) {
+            navMeshAgent.speed = entitySO.speed;
+            navMeshAgent.stoppingDistance = entitySO.attackRange;
+        }
+    }
 
     public void Start() {
         health = entitySO.maxHealth;
@@ -30,7 +35,6 @@ public class Entity : MonoBehaviour {
     protected virtual void Update() {
         TryAttack();
     }
-
 
     public void TryAttack() {
         if (attackTimer <= 0) {
