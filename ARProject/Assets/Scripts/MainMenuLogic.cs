@@ -8,7 +8,7 @@ public class MainMenuLogic : MonoBehaviour
 
     public void StartGame(){
         Debug.Log("Starting the game...");
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("DifficultyMenu");
     }
 
     public void HowToPlay(){
