@@ -36,7 +36,7 @@ public class Entity : MonoBehaviour {
     }
 
     public void TakeDamage(int damage) {
-        Debug.Log(entitySO.entityName + " took " + damage + " damage");
+
         health -= damage;
         if (health <= 0) {
             Die();
