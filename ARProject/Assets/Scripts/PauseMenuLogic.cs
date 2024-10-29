@@ -8,17 +8,21 @@ using UnityEngine.UI;
 
 public class PauseMenuLogic : MonoBehaviour
 {
-    private bool GameIsPaused = true;
+    //private bool GameIsPaused = true;
 
     public GameObject PauseMenuUI;
 
     public PauseButtonLogic PauseButtonUI;
 
+    private void Start(){
+        PauseMenuUI.SetActive(false);
+    }
+
     public void ResumeGame(){
         Debug.Log("Resuming Game...");
         PauseButtonUI.ResumeGame();
         Time.timeScale = 1f;
-        GameIsPaused = false;
+        //GameIsPaused = false;
         PauseMenuUI.SetActive(false);
     }
 
@@ -30,7 +34,7 @@ public class PauseMenuLogic : MonoBehaviour
         Debug.Log("Pausing the Game...");
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameIsPaused = true;
+        //GameIsPaused = true;
     }
 
     public void BackToMenu(){

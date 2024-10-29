@@ -6,6 +6,10 @@ public class PauseButtonLogic : MonoBehaviour
 {
     public GameObject PauseButtonUI;
     public PauseMenuLogic PauseMenuUI;
+    private void Start(){
+        PauseButtonUI.SetActive(true);
+    }
+
     public void PauseGame(){
         Debug.Log("Pausing the Game...");
         PauseMenuUI.PauseGame();
