@@ -27,10 +27,14 @@ public class Enemy : MonoBehaviour {
             AttackDefensePoint();
             LookTowards(defensePoint.position - transform.position);
         } else {
-            CheckForEntitiesInRange();
+            CheckForEntitiesInSight();
 
             if (target != null) {
-                MoveTowards(target.transform);
+                if (!IsWithinAttackRange(target.transform)) {
+                    MoveTowards(target.transform);
+                } else {
+                    LookTowards(target.transform.position - transform.position);
+                }
             } else {
                 MoveTowards(defensePoint);
             }
@@ -51,9 +55,10 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    private void CheckForEntitiesInRange() {
+    private void CheckForEntitiesInSight() {
         target = null;
-        Collider[] hits = Physics.OverlapSphere(transform.position, entity.GetEntitySO().attackRange, LayerMask.GetMask("Entities"));
+        float sightRange = entity.GetEntitySO().sightRange;
+        Collider[] hits = Physics.OverlapSphere(transform.position, sightRange, LayerMask.GetMask("Entities"));
 
         foreach (Collider hit in hits) {
             if (hit.TryGetComponent<Entity>(out Entity otherEntity)) {
@@ -63,6 +68,11 @@ public class Enemy : MonoBehaviour {
                 break;
             }
         }
+    }
+
+    private bool IsWithinAttackRange(Transform targetTransform) {
+        float attackRange = entity.GetEntitySO().attackRange;
+        return Vector3.Distance(transform.position, targetTransform.position) <= attackRange;
     }
 
     private void AttackDefensePoint() {

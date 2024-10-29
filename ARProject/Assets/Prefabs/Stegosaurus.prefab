@@ -36,7 +36,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7fc1c1653883d874ea2b270b8044d3eb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.101
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7fc1c1653883d874ea2b270b8044d3eb,
         type: 3}
@@ -107,40 +107,60 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5304111287022619065, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_Height
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5304111287022619065, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5304111287022619065, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_AgentTypeID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 972381529033350828, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_Size.x
-      value: 2.6133232
+      value: 0.7333828
       objectReference: {fileID: 0}
     - target: {fileID: 972381529033350828, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.2020311
+      value: 0.7050354
       objectReference: {fileID: 0}
     - target: {fileID: 972381529033350828, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_Size.z
-      value: 0.687012
+      value: 2.3180938
       objectReference: {fileID: 0}
     - target: {fileID: 972381529033350828, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.4107542
+      value: -0.0136986375
       objectReference: {fileID: 0}
     - target: {fileID: 972381529033350828, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.56568074
+      value: 0.43139926
       objectReference: {fileID: 0}
     - target: {fileID: 972381529033350828, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_Center.z
-      value: -0.02123198
+      value: -0.31747678
       objectReference: {fileID: 0}
     - target: {fileID: 1085678710032273829, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_Name
       value: Stegosaurus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109875087613807142, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.101
       objectReference: {fileID: 0}
     - target: {fileID: 5250093161584153441, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
@@ -256,6 +276,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8781246967110538412, guid: 405cdecc828c112428df605f6cc60812, type: 3}
+    - {fileID: 3345915457493380340, guid: 405cdecc828c112428df605f6cc60812, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}

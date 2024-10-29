@@ -10,4 +10,5 @@ public class EntitySO : ScriptableObject {
     public float speed;
     public float attackRange;
     public float attackCooldown;
+    public float sightRange;
 }

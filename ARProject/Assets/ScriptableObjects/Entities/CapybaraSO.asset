@@ -18,3 +18,4 @@ MonoBehaviour:
   speed: 2
   attackRange: 5
   attackCooldown: 2
+  sightRange: 5
