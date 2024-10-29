@@ -15,5 +15,5 @@ MonoBehaviour:
   entityName: Lightning
   damage: 10
   speed: 10
-  attackRange: 0.16
+  attackRange: 1
   attackCooldown: 10

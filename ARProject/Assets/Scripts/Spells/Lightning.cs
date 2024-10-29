@@ -13,10 +13,6 @@ public class Lightning : Spell
     {
         GetComponent<Collider>().enabled = true;
 
-        // Check positions of Lightning and transform;
-        Debug.Log("Lightning casted at " + transform.position);
-
-
         Collider[] hits = Physics.OverlapSphere(transform.position, spellSO.attackRange, LayerMask.GetMask("Entities"));
 
         foreach (Collider hit in hits) {

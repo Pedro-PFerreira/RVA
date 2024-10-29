@@ -7,7 +7,6 @@ public class SpellSO : ScriptableObject
 {
     public string entityName;
     public int damage;
-    public float speed;
     public float attackRange;	
     public float attackCooldown;
     

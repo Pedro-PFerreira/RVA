@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Stegosaurus
   maxHealth: 150
-  damage: 30
+  damage: 5
   speed: 5
-  attackRange: 2000000
+  attackRange: 0.3
   attackCooldown: 3
