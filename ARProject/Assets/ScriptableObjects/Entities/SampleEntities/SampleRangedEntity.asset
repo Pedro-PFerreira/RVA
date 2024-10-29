@@ -15,6 +15,7 @@ MonoBehaviour:
   entityName: TheMajesticCapsule
   maxHealth: 30
   damage: 10
-  speed: 5
+  speed: 2
   attackRange: 8
   attackCooldown: 3
+  sightRange: 999
