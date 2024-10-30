@@ -400,8 +400,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 786171418}
-        m_TargetAssemblyTypeName: MainMenuLogic, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_TargetAssemblyTypeName: EndgameMenuLogic, Assembly-CSharp
+        m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -561,7 +561,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 786171413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd31ae8c369a5cf47b9ce8c7ff8c18b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a88e83fe3c7ea446b78ce2e240c6cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &831124699
@@ -1061,8 +1061,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 786171418}
-        m_TargetAssemblyTypeName: MainMenuLogic, Assembly-CSharp
-        m_MethodName: HowToPlay
+        m_TargetAssemblyTypeName: EndgameMenuLogic, Assembly-CSharp
+        m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
