@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VictoryMenu.unity
     guid: c588ced236a8f3745b314fe752d630c8
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 404867b9e3352aa4084206ebd04dd37f
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}
