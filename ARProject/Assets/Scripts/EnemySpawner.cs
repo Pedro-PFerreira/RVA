@@ -23,8 +23,23 @@ public class EnemySpawner : MonoBehaviour {
     }
 
     void Start() {
+        UpdateDifficulty();
         SetDifficultyParameters();
         StartCoroutine(SpawnMonsters());
+    }
+
+    void UpdateDifficulty(){
+        string diff_str = PlayerPrefs.GetString("Difficulty");
+        Debug.Log("Setting Difficulty to " + diff_str + "...");
+        if (diff_str == "Easy"){
+            difficulty = DifficultyLevel.Easy;
+        } 
+        else if (diff_str == "Medium"){
+            difficulty = DifficultyLevel.Medium;
+        }
+        else{
+            difficulty = DifficultyLevel.Hard;
+        }
     }
 
     void SetDifficultyParameters() {
