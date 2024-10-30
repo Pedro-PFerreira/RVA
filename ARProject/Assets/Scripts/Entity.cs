@@ -46,7 +46,6 @@ public class Entity : MonoBehaviour {
     }
 
     public virtual void Attack() {
-        Debug.Log("Attack in base class Entity");
     }
 
     public void TakeDamage(int damage, Entity attacker) {

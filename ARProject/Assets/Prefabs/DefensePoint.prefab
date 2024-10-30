@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 9153286708835978503}
   - component: {fileID: 6505421449162477366}
   - component: {fileID: 2559532599924165011}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DefensePoint
   m_TagString: DefensePoint
   m_Icon: {fileID: 0}
