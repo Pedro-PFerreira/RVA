@@ -12,5 +12,4 @@ public class DifficultyMenuLogic : MonoBehaviour
         PlayerPrefs.Save();
         SceneManager.LoadScene("AnchorScene");
     }
-
 }
