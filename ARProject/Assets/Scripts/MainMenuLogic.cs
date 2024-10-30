@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuLogic : MonoBehaviour
 {
+    private void Start(){
+        PlayerPrefs.SetString("Difficulty","Easy");
+    }
 
     public void StartGame(){
         Debug.Log("Starting the game...");
