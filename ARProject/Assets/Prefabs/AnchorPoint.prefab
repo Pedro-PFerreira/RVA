@@ -349,6 +349,39 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 9073321457596347522, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 9073321457596347522, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 7991123036385501000, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[2].spawnWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[3].spawnWeight
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7931616901702309843, guid: 6187536434f136c4fac4ce9f8d06ef17,
         type: 3}
       propertyPath: m_Name
