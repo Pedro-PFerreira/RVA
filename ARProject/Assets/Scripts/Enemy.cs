@@ -23,12 +23,12 @@ public class Enemy : MonoBehaviour {
     }
 
     void Update() {
+        CheckForEntitiesInSight();
+
         if (isAttacking) {
             AttackDefensePoint();
             LookTowards(defensePoint.position - transform.position);
         } else {
-            CheckForEntitiesInSight();
-
             if (target != null) {
                 if (!IsWithinAttackRange(target.transform)) {
                     MoveTowards(target.transform);
@@ -65,9 +65,11 @@ public class Enemy : MonoBehaviour {
                 if (otherEntity == this) continue;
                 if (!(entity.IsEnemy() ^ otherEntity.IsEnemy())) continue;
                 target = otherEntity;
-                break;
+                return;
             }
         }
+
+        isAttacking = false;
     }
 
     private bool IsWithinAttackRange(Transform targetTransform) {

@@ -21,7 +21,6 @@ public class HPBarUI : MonoBehaviour
 
     private void Entity_OnHPChanged(object sender, Entity.OnHPChangedEventArgs e) {
         barImage.fillAmount = e.hpNormalized;
-        Debug.Log("HP changed to " + e.hpNormalized);
     }
 
 }
