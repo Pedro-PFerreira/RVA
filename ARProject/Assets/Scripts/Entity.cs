@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,6 +10,8 @@ public class Entity : MonoBehaviour {
     public class OnHPChangedEventArgs : EventArgs {
         public float hpNormalized;
     }
+
+    private Animator animator;
 
     [SerializeField] protected EntitySO entitySO;
     private int health;
@@ -20,6 +23,8 @@ public class Entity : MonoBehaviour {
         attackTimer = 0;
         GetComponent<Rigidbody>().isKinematic = true;
 
+        animator = GetComponentInChildren<Animator>();
+        
         navMeshAgent = GetComponent<NavMeshAgent>();
         if (navMeshAgent != null) {
             navMeshAgent.speed = entitySO.speed;
@@ -65,6 +70,23 @@ public class Entity : MonoBehaviour {
     }
 
     public void Die() {
+        if (animator != null) {
+            animator.SetBool("isEnemyInRange", false);
+            animator.SetBool("isMoving", false);
+            animator.SetBool("isDead", true);
+
+            // Start coroutine to wait for the animation duration before deactivating
+            StartCoroutine(WaitForDeathAnimation());
+        }else{
+            gameObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator WaitForDeathAnimation() {
+        // Find the "isDead" animation clip's length
+        float animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
+        
+        yield return new WaitForSeconds(animationLength);
         Debug.Log(entitySO.entityName + " died");
         gameObject.SetActive(false);
     }
@@ -79,5 +101,9 @@ public class Entity : MonoBehaviour {
 
     public bool IsEnemy() {
         return isEnemy;
+    }
+
+    public Animator GetAnimator(){
+        return animator;
     }
 }

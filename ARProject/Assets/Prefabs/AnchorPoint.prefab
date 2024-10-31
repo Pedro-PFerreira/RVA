@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3055119943408477033
 Transform:
   m_ObjectHideFlags: 0
@@ -358,7 +358,13 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyTypes.Array.data[0].prefab
       value: 
-      objectReference: {fileID: 9073321457596347522, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+      objectReference: {fileID: 9030670888721131543, guid: f2722f5fba9d40d46b3401bb59131b3a,
+        type: 3}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[1].prefab
+      value: 
+      objectReference: {fileID: 7991123036385501000, guid: 3fc4ccd5ee82a29408a68c188f667e17,
         type: 3}
     - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
         type: 3}
@@ -372,6 +378,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7991123036385501000, guid: 3fc4ccd5ee82a29408a68c188f667e17,
         type: 3}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[0].spawnWeight
+      value: 265
+      objectReference: {fileID: 0}
+    - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
+        type: 3}
+      propertyPath: enemyTypes.Array.data[1].spawnWeight
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 791452855035737028, guid: 6187536434f136c4fac4ce9f8d06ef17,
         type: 3}
       propertyPath: enemyTypes.Array.data[2].spawnWeight

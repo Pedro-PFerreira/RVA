@@ -109,6 +109,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5304111287022619065, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
+      propertyPath: m_Speed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -5304111287022619065, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
       propertyPath: m_Height
       value: 1
       objectReference: {fileID: 0}
@@ -195,7 +200,7 @@ PrefabInstance:
     - target: {fileID: 8064222255065012570, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: isEnemy
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8064222255065012570, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
