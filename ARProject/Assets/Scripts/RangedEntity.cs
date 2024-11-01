@@ -13,6 +13,8 @@ public class RangedEntity : Entity
     }
 
     public void ThrowProjectile(Vector3 dir) {
+        GetAnimator().SetBool("isEnemyInRange", true);
+        GetAnimator().SetBool("isMoving", false);
         GameObject projectileInstance = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
         projectileInstance.SetActive(true);
     }

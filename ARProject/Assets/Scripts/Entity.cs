@@ -83,11 +83,9 @@ public class Entity : MonoBehaviour {
     }
 
     private IEnumerator WaitForDeathAnimation() {
-        // Find the "isDead" animation clip's length
         float animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
         
         yield return new WaitForSeconds(animationLength);
-        Debug.Log(entitySO.entityName + " died");
         gameObject.SetActive(false);
     }
 

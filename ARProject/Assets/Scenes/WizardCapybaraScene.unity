@@ -241,89 +241,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1001 &1085432969
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1017506146340853687, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: isEnemy
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.133
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3047110644739431810, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0522
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991123036385501000, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_Name
-      value: Capybara
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991123036385501000, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3fc4ccd5ee82a29408a68c188f667e17, type: 3}
 --- !u!1001 &1151919319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -447,6 +364,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50746aeac6ce2e548a715cefedee49ca, type: 3}
+--- !u!1001 &1754207379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.097
+      objectReference: {fileID: 0}
+    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073321457596347522, guid: f5efa819857f37f4abe3bef6bacf7ebd,
+        type: 3}
+      propertyPath: m_Name
+      value: WizardCapybara
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5efa819857f37f4abe3bef6bacf7ebd, type: 3}
 --- !u!1 &1795511575
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +524,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1918416381
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991123036385501000, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: m_Name
+      value: Capybara
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3fc4ccd5ee82a29408a68c188f667e17, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -546,4 +599,5 @@ SceneRoots:
   - {fileID: 1795511578}
   - {fileID: 476406576}
   - {fileID: 1151919319}
-  - {fileID: 1085432969}
+  - {fileID: 1754207379}
+  - {fileID: 1918416381}

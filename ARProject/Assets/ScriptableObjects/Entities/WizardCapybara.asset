@@ -17,5 +17,5 @@ MonoBehaviour:
   damage: 10
   speed: 2
   attackRange: 8
-  attackCooldown: 3
-  sightRange: 999
+  attackCooldown: 1.5
+  sightRange: 50
