@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour {
     [System.Serializable]
@@ -14,7 +15,12 @@ public class EnemySpawner : MonoBehaviour {
     public DifficultyLevel difficulty;     // Select difficulty level from the Inspector
 
     private int monsterCount;
+
+    private int deadMonsterCount = 0;
+
     private float spawnDelay;
+
+    private bool allMonstersSpawned;
 
     public enum DifficultyLevel {
         Easy,
@@ -26,6 +32,7 @@ public class EnemySpawner : MonoBehaviour {
         UpdateDifficulty();
         SetDifficultyParameters();
         StartCoroutine(SpawnMonsters());
+        allMonstersSpawned = false;
     }
 
     void UpdateDifficulty(){
@@ -59,6 +66,13 @@ public class EnemySpawner : MonoBehaviour {
         }
     }
 
+    public void UpdateDeadCounter(){
+        deadMonsterCount += 1;
+        if(deadMonsterCount == monsterCount){//if all monsters are dead
+            SceneManager.LoadScene("VictoryMenu");
+        }
+    }
+
     IEnumerator SpawnMonsters() {
         for (int i = 0; i < monsterCount; i++) {
             GameObject selectedEnemy = GetRandomEnemy(); // Get a random enemy based on weight
@@ -69,6 +83,7 @@ public class EnemySpawner : MonoBehaviour {
 
             yield return new WaitForSeconds(spawnDelay); // Wait before spawning the next monster
         }
+        allMonstersSpawned = true;
     }
 
     GameObject GetRandomEnemy() {

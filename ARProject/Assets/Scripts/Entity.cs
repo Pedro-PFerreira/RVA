@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Entity : MonoBehaviour {
     public event EventHandler<OnHPChangedEventArgs> OnHPChanged;
@@ -15,6 +16,8 @@ public class Entity : MonoBehaviour {
     private float attackTimer;
     private NavMeshAgent navMeshAgent;
     public bool isEnemy = false;
+
+    [SerializeField] EnemySpawner spawner;
 
     public void Awake() {
         attackTimer = 0;
@@ -34,6 +37,7 @@ public class Entity : MonoBehaviour {
 
     protected virtual void Update() {
         TryAttack();
+        //TakeDamage(1); //for testing purposes only
     }
 
     public void TryAttack() {
@@ -66,6 +70,14 @@ public class Entity : MonoBehaviour {
 
     public void Die() {
         Debug.Log(entitySO.entityName + " died");
+        if (entitySO.entityName == "HolyBara"){
+            Debug.Log("Game Over!");
+            SceneManager.LoadScene("GameOverMenu");
+        }
+        else if (isEnemy){
+            Debug.Log("Enemy killed!");
+            spawner.UpdateDeadCounter();
+        }
         gameObject.SetActive(false);
     }
 
