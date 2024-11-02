@@ -7,7 +7,7 @@ public class EndgameMenuLogic : MonoBehaviour
 {
     public void PlayAgain(){
         Debug.Log("Restarting the game...");
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("DifficultyMenu");
     }
 
     public void BackToMenu(){
