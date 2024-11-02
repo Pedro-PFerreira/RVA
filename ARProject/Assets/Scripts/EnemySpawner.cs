@@ -14,13 +14,15 @@ public class EnemySpawner : MonoBehaviour {
     public Transform[] spawnPoints;        // Assign spawn points here in the Inspector
     public DifficultyLevel difficulty;     // Select difficulty level from the Inspector
 
-    private int monsterCount;
+    public GameObject enemyList;
 
-    private int deadMonsterCount = 0;
+    private int monsterCount;
 
     private float spawnDelay;
 
     private bool allMonstersSpawned;
+
+    private Transform[] enemies;
 
     public enum DifficultyLevel {
         Easy,
@@ -33,6 +35,19 @@ public class EnemySpawner : MonoBehaviour {
         SetDifficultyParameters();
         StartCoroutine(SpawnMonsters());
         allMonstersSpawned = false;
+    }
+
+    void Update(){
+        if (AllEnemiesDead()){
+            SceneManager.LoadScene("VictoryMenu");
+        }
+        Debug.Log("Enemies Alive:" + enemies.Length);
+        if(allMonstersSpawned){
+            Debug.Log("Enemies stopped spawning");
+        }
+        else{
+            Debug.Log("Enemies Are Still Spawning");
+        }
     }
 
     void UpdateDifficulty(){
@@ -66,24 +81,23 @@ public class EnemySpawner : MonoBehaviour {
         }
     }
 
-    public void UpdateDeadCounter(){
-        deadMonsterCount += 1;
-        if(deadMonsterCount == monsterCount){//if all monsters are dead
-            SceneManager.LoadScene("VictoryMenu");
-        }
-    }
-
     IEnumerator SpawnMonsters() {
         for (int i = 0; i < monsterCount; i++) {
             GameObject selectedEnemy = GetRandomEnemy(); // Get a random enemy based on weight
             int spawnIndex = i % spawnPoints.Length; // Cycle through spawn points
-            GameObject instance = Instantiate(selectedEnemy, spawnPoints[spawnIndex].position, Quaternion.identity);
+            GameObject instance = Instantiate(selectedEnemy, spawnPoints[spawnIndex].position, Quaternion.identity, enemyList.transform);
             instance.AddComponent<Enemy>();
             instance.GetComponent<Entity>().SetEnemy(true);
 
             yield return new WaitForSeconds(spawnDelay); // Wait before spawning the next monster
         }
         allMonstersSpawned = true;
+        if (allMonstersSpawned){Debug.Log("All monsters have spawned!");}
+    }
+
+    bool AllEnemiesDead(){
+        enemies = enemyList.GetComponentsInChildren<Transform>();
+        return enemies.Length - 1 == 0 && allMonstersSpawned;
     }
 
     GameObject GetRandomEnemy() {

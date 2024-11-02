@@ -17,8 +17,6 @@ public class Entity : MonoBehaviour {
     private NavMeshAgent navMeshAgent;
     public bool isEnemy = false;
 
-    [SerializeField] EnemySpawner spawner;
-
     public void Awake() {
         attackTimer = 0;
         GetComponent<Rigidbody>().isKinematic = true;
@@ -37,7 +35,6 @@ public class Entity : MonoBehaviour {
 
     protected virtual void Update() {
         TryAttack();
-        //TakeDamage(1); //for testing purposes only
     }
 
     public void TryAttack() {
@@ -73,10 +70,6 @@ public class Entity : MonoBehaviour {
         if (entitySO.entityName == "HolyBara"){
             Debug.Log("Game Over!");
             SceneManager.LoadScene("GameOverMenu");
-        }
-        else if (isEnemy){
-            Debug.Log("Enemy killed!");
-            spawner.UpdateDeadCounter();
         }
         gameObject.SetActive(false);
     }
