@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour {
     private Entity entity;
     private NavMeshAgent navMeshAgent;
     private Entity target;
-
     private bool isAttacking = false;
 
     void Awake() {
@@ -42,6 +41,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void MoveTowards(Transform targetTransform) {
+        entity.GetAnimator().SetBool("isMoving", true);
         if (targetTransform != null && navMeshAgent.isOnNavMesh) {
             navMeshAgent.SetDestination(targetTransform.position);
             LookTowards(targetTransform.position - transform.position);

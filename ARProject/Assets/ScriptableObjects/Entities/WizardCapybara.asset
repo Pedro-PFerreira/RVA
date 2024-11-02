@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42532650d45dee245bd7259a397aa814, type: 3}
-  m_Name: CapybaraSO
+  m_Name: WizardCapybara
   m_EditorClassIdentifier: 
-  entityName: Capybara
-  maxHealth: 100
-  damage: 60
+  entityName: WizardCapybara
+  maxHealth: 30
+  damage: 10
   speed: 2
-  attackRange: 5
-  attackCooldown: 2
-  sightRange: 5
+  attackRange: 8
+  attackCooldown: 1.5
+  sightRange: 50
