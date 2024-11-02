@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Entity : MonoBehaviour {
     public event EventHandler<OnHPChangedEventArgs> OnHPChanged;
@@ -70,6 +71,11 @@ public class Entity : MonoBehaviour {
     }
 
     public void Die() {
+        Debug.Log(entitySO.entityName + " died");
+        if (entitySO.entityName == "HolyBara"){
+            Debug.Log("Game Over!");
+            SceneManager.LoadScene("GameOverMenu");
+        }
         if (animator != null) {
             animator.SetBool("isEnemyInRange", false);
             animator.SetBool("isMoving", false);
