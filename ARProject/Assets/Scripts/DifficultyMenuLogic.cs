@@ -12,4 +12,9 @@ public class DifficultyMenuLogic : MonoBehaviour
         PlayerPrefs.Save();
         SceneManager.LoadScene("GameScene");
     }
+
+    public void BackToMenu(){
+        Debug.Log("Restarting the game...");
+        SceneManager.LoadScene("MainMenu");
+    }
 }
