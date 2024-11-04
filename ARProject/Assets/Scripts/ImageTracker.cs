@@ -11,71 +11,36 @@ public class ImageTracker : MonoBehaviour
 
     List<GameObject> ARObjects = new List<GameObject>();
 
-    public void Awake()
-    {
+    public void Awake() {
         trackedImages = GetComponent<ARTrackedImageManager>();
     }
 
-    public void OnEnable()
-    {
+    public void OnEnable() {
         trackedImages.trackedImagesChanged += OnTrackedImagesChanged;
     }
 
-    public void OnDisable()
-    {
+    public void OnDisable() {
         trackedImages.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
-    public void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
-    {
-
-        // Object creation
-        foreach (var trackedImage in eventArgs.added)
-        {
-            foreach (var arPrefab in ARPrefabs)
-            {
-                if (trackedImage.referenceImage.name == arPrefab.name)
-                {
-                    Debug.Log("Matching prefab found: " + arPrefab.name);
-                    GameObject arObject = Instantiate(arPrefab);
-                    arObject.transform.position = trackedImage.transform.position;
-                    arObject.transform.rotation = trackedImage.transform.rotation;
-                    arObject.transform.SetParent(trackedImage.transform, true);
+    public void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
+        foreach (var trackedImage in eventArgs.added) {
+            foreach (var arPrefab in ARPrefabs) {
+                if (trackedImage.referenceImage.name == arPrefab.name) {
+                    GameObject arObject = Instantiate(arPrefab, trackedImage.transform);
+                    arObject.transform.localPosition = Vector3.zero;
+                    arObject.transform.localRotation = Quaternion.identity; // Resets rotation
                     ARObjects.Add(arObject);
                 }
             }
         }
 
-        // Object position tracking
-        foreach (var trackedImage in eventArgs.updated)
-        {
-            foreach (var gameObject in ARObjects)
-            {
-                if (gameObject.name == trackedImage.referenceImage.name)
-                {
-                    gameObject.SetActive(trackedImage.trackingState == TrackingState.Tracking);
-                    if (trackedImage.trackingState == TrackingState.Tracking)
-                    {
-                        gameObject.transform.position = trackedImage.transform.position;
-                        gameObject.transform.rotation = trackedImage.transform.rotation;
-                    }
+        foreach (var trackedImage in eventArgs.updated) {
+            foreach (var arObject in ARObjects) {
+                if (arObject.name == trackedImage.referenceImage.name) {
+                    arObject.SetActive(trackedImage.trackingState == TrackingState.Tracking);
                 }
             }
         }
-
-        // Object deletion
-        foreach (var trackedImage in eventArgs.removed)
-        {
-            foreach (var gameObject in ARObjects)
-            {
-                if (gameObject.name == trackedImage.referenceImage.name)
-                {
-                    ARObjects.Remove(gameObject);
-                    Destroy(gameObject);
-                }
-            }
-        }
-
-
     }
 }

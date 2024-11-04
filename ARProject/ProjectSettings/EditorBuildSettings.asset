@@ -8,30 +8,30 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 4755b35b590504809a7525fd2109c2e2
-  - enabled: 0
-    path: Assets/Scenes/MainScene.unity
-    guid: f2c8fa065a039fb48b9ab709b253d9a0
-  - enabled: 1
-    path: Assets/Scenes/PauseMenu.unity
-    guid: 80bd4c653c9001f40ad795062ec45610
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: a1e23587cb44db941856c254b27a96bb
+  - enabled: 0
+    path: Assets/Scenes/MainScene.unity
+    guid: f2c8fa065a039fb48b9ab709b253d9a0
+  - enabled: 0
+    path: Assets/Scenes/AnchorScene.unity
+    guid: b37ca8b7cbca05148a561c3c034a0182
+  - enabled: 0
+    path: Assets/Scenes/PauseMenu.unity
+    guid: 80bd4c653c9001f40ad795062ec45610
   - enabled: 1
     path: Assets/Scenes/DifficultyMenu.unity
     guid: 93f373c070cac584385adf279579bffd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameOverMenu.unity
     guid: 120084373b3ed5a4c81b1e0f1cea4482
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/VictoryMenu.unity
     guid: c588ced236a8f3745b314fe752d630c8
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 404867b9e3352aa4084206ebd04dd37f
-  - enabled: 1
-    path: Assets/Scenes/AnchorScene.unity
-    guid: b37ca8b7cbca05148a561c3c034a0182
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}

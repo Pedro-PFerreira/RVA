@@ -72,10 +72,10 @@ public class Entity : MonoBehaviour {
 
     public void Die() {
         Debug.Log(entitySO.entityName + " died");
-        if (entitySO.entityName == "HolyBara"){
-            Debug.Log("Game Over!");
-            SceneManager.LoadScene("GameOverMenu");
-        }
+        // if (entitySO.entityName == "HolyBara"){
+        //     Debug.Log("Game Over!");
+        //     SceneManager.LoadScene("GameOverMenu");
+        // }
         if (animator != null) {
             animator.SetBool("isEnemyInRange", false);
             animator.SetBool("isMoving", false);

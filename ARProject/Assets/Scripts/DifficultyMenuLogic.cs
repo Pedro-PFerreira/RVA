@@ -10,6 +10,6 @@ public class DifficultyMenuLogic : MonoBehaviour
         Debug.Log("Starting a " + difficulty + " match...");
         PlayerPrefs.SetString("Difficulty",difficulty);
         PlayerPrefs.Save();
-        SceneManager.LoadScene("AnchorScene");
+        SceneManager.LoadScene("GameScene");
     }
 }
