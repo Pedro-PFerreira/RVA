@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6656793816438591624}
+  - component: {fileID: 8432134211193317414}
   m_Layer: 0
   m_Name: Tornado
   m_TagString: Untagged
@@ -26,12 +27,30 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4791883427450624528}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8432134211193317414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513652949444345035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f25aa10e7fec14ba5992dff4bb32ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellSO: {fileID: 11400000, guid: eab9ebb91ccb18e4ea8522612169103e, type: 2}
+  pullStrength: 2
+  orbitRadius: 0.04
+  orbitSpeed: 4.8
+  chaosFrequency: 20
+  chaosAmplitude: 0.8
 --- !u!1001 &4974940384099302907
 PrefabInstance:
   m_ObjectHideFlags: 0

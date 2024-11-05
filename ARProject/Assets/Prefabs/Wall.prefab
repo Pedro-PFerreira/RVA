@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 3020502987615108183, guid: 66b034d207595e14f8cb453612f24cf0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3052761656571658621, guid: 66b034d207595e14f8cb453612f24cf0,
         type: 3}
       propertyPath: m_Extents.x

@@ -41,13 +41,6 @@ public class EnemySpawner : MonoBehaviour {
         if (AllEnemiesDead()){
             SceneManager.LoadScene("VictoryMenu");
         }
-        Debug.Log("Enemies Alive:" + enemies.Length);
-        if(allMonstersSpawned){
-            Debug.Log("Enemies stopped spawning");
-        }
-        else{
-            Debug.Log("Enemies Are Still Spawning");
-        }
     }
 
     void UpdateDifficulty(){
