@@ -31,8 +31,6 @@ public class Enemy : MonoBehaviour {
             if (target != null) {
                 if (!IsWithinAttackRange(target.transform)) {
                     MoveTowards(target.transform);
-                } else {
-                    LookTowards(target.transform.position - transform.position);
                 }
             } else {
                 MoveTowards(defensePoint);

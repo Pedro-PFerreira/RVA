@@ -28,8 +28,8 @@ public class Entity : MonoBehaviour {
         
         navMeshAgent = GetComponent<NavMeshAgent>();
         if (navMeshAgent != null) {
-            navMeshAgent.speed = entitySO.speed;
-            navMeshAgent.stoppingDistance = entitySO.attackRange;
+            navMeshAgent.speed = entitySO.speed * transform.localScale.x;
+            navMeshAgent.stoppingDistance = entitySO.attackRange * transform.localScale.x;
         }
     }
 
