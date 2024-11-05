@@ -76,11 +76,11 @@ public class Entity : MonoBehaviour {
     public void Die() {
 
         isDead = true;
-        Debug.Log(entitySO.entityName + " died");
-        // if (entitySO.entityName == "HolyBara"){
-        //     Debug.Log("Game Over!");
-        //     SceneManager.LoadScene("GameOverMenu");
-        // }
+        
+        // Game over branch
+        if (entitySO.entityName == "HolyBara"){
+            SceneManager.LoadScene("GameOverMenu");
+        }
         if (animator != null) {
             animator.SetBool("isEnemyInRange", false);
             animator.SetBool("isMoving", false);

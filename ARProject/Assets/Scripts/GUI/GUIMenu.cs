@@ -26,23 +26,16 @@ public class GUIMenu : MonoBehaviour{
         }
     }
     public void StartGame(string difficulty){
-        Debug.Log("Starting a " + difficulty + " match...");
         PlayerPrefs.SetString("Difficulty",difficulty);
         PlayerPrefs.Save();
         SceneManager.LoadScene("GameScene");
     }
 
-    public void HowToPlay(){
-        Debug.Log("How to Play Opening...");
-    }
-
     public void QuitGame(){
-        Debug.Log("Leaving the game...");
         Application.Quit();
     }
 
     public void PlayAgain(){
-        Debug.Log("Restarting the game...");
         SceneManager.LoadScene("DifficultyMenu");
     }
 

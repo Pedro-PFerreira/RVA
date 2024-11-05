@@ -45,7 +45,6 @@ public class EnemySpawner : MonoBehaviour {
 
     void UpdateDifficulty(){
         string diff_str = PlayerPrefs.GetString("Difficulty");
-        Debug.Log("Setting Difficulty to " + diff_str + "...");
         if (diff_str == "Easy"){
             difficulty = DifficultyLevel.Easy;
         } 
@@ -85,7 +84,6 @@ public class EnemySpawner : MonoBehaviour {
             yield return new WaitForSeconds(spawnDelay); // Wait before spawning the next monster
         }
         allMonstersSpawned = true;
-        if (allMonstersSpawned){Debug.Log("All monsters have spawned!");}
     }
 
     bool AllEnemiesDead(){
@@ -96,16 +94,15 @@ public class EnemySpawner : MonoBehaviour {
     GameObject GetRandomEnemy() {
         int totalWeight = 0;
 
-        // Calculate total weight
+
         foreach (var enemy in enemyTypes) {
             totalWeight += enemy.spawnWeight;
         }
 
-        // Pick a random value between 0 and totalWeight
         int randomValue = Random.Range(0, totalWeight);
         int cumulativeWeight = 0;
 
-        // Select the enemy based on random weight
+
         foreach (var enemy in enemyTypes) {
             cumulativeWeight += enemy.spawnWeight;
             if (randomValue < cumulativeWeight) {
@@ -113,7 +110,6 @@ public class EnemySpawner : MonoBehaviour {
             }
         }
 
-        // Fallback in case of an error
         return enemyTypes[0].prefab;
     }
 }
