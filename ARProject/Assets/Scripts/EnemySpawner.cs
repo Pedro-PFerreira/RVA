@@ -60,16 +60,16 @@ public class EnemySpawner : MonoBehaviour {
     void SetDifficultyParameters() {
         switch (difficulty) {
             case DifficultyLevel.Easy:
-                monsterCount = 3;
-                spawnDelay = 2.0f;
+                monsterCount = 5;
+                spawnDelay = 4f;
                 break;
             case DifficultyLevel.Medium:
-                monsterCount = 6;
-                spawnDelay = 1.5f;
+                monsterCount = 7;
+                spawnDelay = 3f;
                 break;
             case DifficultyLevel.Hard:
-                monsterCount = 10;
-                spawnDelay = 1.0f;
+                monsterCount = 9;
+                spawnDelay = 2f;
                 break;
         }
     }
