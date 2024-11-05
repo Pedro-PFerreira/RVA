@@ -690,9 +690,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Position the Holybara marker in the center of your game area.\n\n2.
-    Watch out! Enemies will start attacking from every direction!\n\n3. Position
-    other character and spell markers in the area to defend it! \n\n4.Move them around
+  m_text: "The game starts when you position the Holybara in the center of your game
+    area\n\nEnemies will start attacking from every direction!\n\nAt any time, position
+    other character and spell markers in the area to defend it! \n\nMove them around
     and rotate them!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
