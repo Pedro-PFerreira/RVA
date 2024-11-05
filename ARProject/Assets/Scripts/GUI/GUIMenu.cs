@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GUI : MonoBehaviour{
+public class GUIMenu : MonoBehaviour{
 
     public enum MenuType{
         DifficultyMenu,
