@@ -14,6 +14,10 @@ public class Projectile : MonoBehaviour {
                 Destroy(this.gameObject);
             }
         }
+
+        if (Vector3.Distance(transform.position, thrower.transform.position) > thrower.GetEntitySO().attackRange) {
+            Destroy(this.gameObject);
+        }
     }
 
 
