@@ -178,6 +178,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Capybara
       objectReference: {fileID: 0}
+    - target: {fileID: 1085678710032273829, guid: 405cdecc828c112428df605f6cc60812,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3109875087613807142, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -222,17 +227,17 @@ PrefabInstance:
     - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
@@ -257,17 +262,17 @@ PrefabInstance:
     - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}

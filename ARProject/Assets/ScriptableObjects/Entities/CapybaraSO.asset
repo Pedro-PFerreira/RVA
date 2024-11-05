@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: CapybaraSO
   m_EditorClassIdentifier: 
   entityName: Capybara
-  maxHealth: 100
-  damage: 60
+  maxHealth: 300
+  damage: 14
   speed: 2
-  attackRange: 5
-  attackCooldown: 2
-  sightRange: 5
+  attackRange: 0.05
+  attackCooldown: 0.5
+  sightRange: 0.5

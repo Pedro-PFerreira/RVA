@@ -206,7 +206,7 @@ PrefabInstance:
         type: 3}
       propertyPath: entitySO
       value: 
-      objectReference: {fileID: 11400000, guid: 8b92e4c6ca59c9843b27f8604de13abd,
+      objectReference: {fileID: 11400000, guid: 1878f1e693790c94c9e71b757b124a1f,
         type: 2}
     - target: {fileID: 8606639592175642245, guid: 405cdecc828c112428df605f6cc60812,
         type: 3}

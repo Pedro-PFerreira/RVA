@@ -347,11 +347,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
-    - target: {fileID: 8617208981584926405, guid: 861d0041913d67246b828dc89889c230,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8885756204652020606, guid: 861d0041913d67246b828dc89889c230,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -475,11 +470,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fire
-      objectReference: {fileID: 0}
-    - target: {fileID: 4880150558824197225, guid: ffbb6285194095f46b49d93c700f5608,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1370,14 +1360,14 @@ GameObject:
   - component: {fileID: 514033495}
   - component: {fileID: 514033498}
   - component: {fileID: 514033497}
-  - component: {fileID: 514033496}
+  - component: {fileID: 514033499}
   m_Layer: 0
   m_Name: FireImageTarget (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &514033495
 Transform:
   m_ObjectHideFlags: 0
@@ -1394,25 +1384,6 @@ Transform:
   - {fileID: 1582483029}
   m_Father: {fileID: 23346894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &514033496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514033494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 514033498}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Fire
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 514033498}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &514033497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,7 +1466,26 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 514033496}
+  mPreview: {fileID: 514033499}
+--- !u!114 &514033499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514033494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 514033498}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: Fire
+  mDatasetName: 
+  mCastedBehaviour: {fileID: 514033498}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &544226496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,7 +1637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &597290889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2153,21 +2143,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2216,20 +2191,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9073321457596347522, guid: f5efa819857f37f4abe3bef6bacf7ebd,
         type: 3}
       propertyPath: m_Name
       value: WizardCapybara
-      objectReference: {fileID: 0}
-    - target: {fileID: 9073321457596347522, guid: f5efa819857f37f4abe3bef6bacf7ebd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2452,14 +2417,14 @@ GameObject:
   - component: {fileID: 901113853}
   - component: {fileID: 901113856}
   - component: {fileID: 901113855}
-  - component: {fileID: 901113854}
+  - component: {fileID: 901113857}
   m_Layer: 0
   m_Name: FireImageTarget (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &901113853
 Transform:
   m_ObjectHideFlags: 0
@@ -2476,25 +2441,6 @@ Transform:
   - {fileID: 662136356}
   m_Father: {fileID: 23346894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &901113854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901113852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 901113856}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Fire
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 901113856}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &901113855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2577,7 +2523,26 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 901113854}
+  mPreview: {fileID: 901113857}
+--- !u!114 &901113857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901113852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 901113856}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: Fire
+  mDatasetName: 
+  mCastedBehaviour: {fileID: 901113856}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!4 &937637698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 399448005166039970, guid: f5efa819857f37f4abe3bef6bacf7ebd,
@@ -3187,6 +3152,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1873656933}
     m_Modifications:
+    - target: {fileID: 1017506146340853687, guid: 3fc4ccd5ee82a29408a68c188f667e17,
+        type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3283,21 +3253,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623505898165921896, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3350,11 +3305,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Capybara
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991123036385501000, guid: 3fc4ccd5ee82a29408a68c188f667e17,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4315,7 +4265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1792162878
 Transform:
   m_ObjectHideFlags: 0
@@ -4855,26 +4805,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnchorPoint
       objectReference: {fileID: 0}
-    - target: {fileID: 2323680441177125833, guid: 50746aeac6ce2e548a715cefedee49ca,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055119943408477033, guid: 50746aeac6ce2e548a715cefedee49ca,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055119943408477033, guid: 50746aeac6ce2e548a715cefedee49ca,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3055119943408477033, guid: 50746aeac6ce2e548a715cefedee49ca,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.15
-      objectReference: {fileID: 0}
     - target: {fileID: 3055119943408477033, guid: 50746aeac6ce2e548a715cefedee49ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4925,13 +4855,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3055119943408477033, guid: 50746aeac6ce2e548a715cefedee49ca,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7197834476403563634, guid: 50746aeac6ce2e548a715cefedee49ca, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4946,21 +4870,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6656793816438591624, guid: daf0ee42d1a2fce4f9450341679f4087,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6656793816438591624, guid: daf0ee42d1a2fce4f9450341679f4087,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6656793816438591624, guid: daf0ee42d1a2fce4f9450341679f4087,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6656793816438591624, guid: daf0ee42d1a2fce4f9450341679f4087,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5009,20 +4918,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6656793816438591624, guid: daf0ee42d1a2fce4f9450341679f4087,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7513652949444345035, guid: daf0ee42d1a2fce4f9450341679f4087,
         type: 3}
       propertyPath: m_Name
       value: Tornado
-      objectReference: {fileID: 0}
-    - target: {fileID: 7513652949444345035, guid: daf0ee42d1a2fce4f9450341679f4087,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
