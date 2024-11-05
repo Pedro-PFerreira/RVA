@@ -399,16 +399,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 786171418}
-        m_TargetAssemblyTypeName: VictoryMenuLogic, Assembly-CSharp
-        m_MethodName: BackToMenu
-        m_Mode: 1
+      - m_Target: {fileID: 786171419}
+        m_TargetAssemblyTypeName: GUI, Assembly-CSharp
+        m_MethodName: GoToMenu
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &222524780
@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 786171415}
   - component: {fileID: 786171414}
   - component: {fileID: 786171418}
+  - component: {fileID: 786171419}
   m_Layer: 5
   m_Name: VictoryMenuCanvas
   m_TagString: Untagged
@@ -564,6 +565,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a88e83fe3c7ea446b78ce2e240c6cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &786171419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786171413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ceb933a714eac4982e8f78db9d05d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuIdentifier: 6
 --- !u!1 &831124699
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,10 +949,10 @@ RectTransform:
   - {fileID: 222524778}
   m_Father: {fileID: 2065570474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.11138688}
-  m_AnchorMax: {x: 1, y: 0.638342}
-  m_AnchoredPosition: {x: 0, y: -37.320637}
-  m_SizeDelta: {x: 0, y: -82.87842}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -254.2107}
+  m_SizeDelta: {x: 1080, y: 1137.1216}
   m_Pivot: {x: 0.5, y: 0.5599262}
 --- !u!114 &1658418216
 MonoBehaviour:
@@ -1061,16 +1075,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 786171418}
-        m_TargetAssemblyTypeName: VictoryMenuLogic, Assembly-CSharp
-        m_MethodName: PlayAgain
-        m_Mode: 1
+      - m_Target: {fileID: 786171419}
+        m_TargetAssemblyTypeName: GUI, Assembly-CSharp
+        m_MethodName: GoToMenu
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: DifficultyMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1741587238
@@ -1447,10 +1461,10 @@ RectTransform:
   - {fileID: 1658418215}
   m_Father: {fileID: 786171417}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1158}
-  m_SizeDelta: {x: 1080, y: 2316}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2065570475
 MonoBehaviour:
