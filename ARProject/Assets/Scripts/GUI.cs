@@ -10,6 +10,8 @@ public class GUI : MonoBehaviour{
     public enum MenuType{
         DifficultyMenu,
         GameOverMenu,
+
+        HowToPlayMenu,
         MainMenu,
         PauseButton,
         PauseMenu,
