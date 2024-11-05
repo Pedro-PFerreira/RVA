@@ -206,16 +206,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 786171418}
-        m_TargetAssemblyTypeName: DifficultyMenuLogic, Assembly-CSharp
-        m_MethodName: BackToMenu
-        m_Mode: 1
+      - m_Target: {fileID: 786171419}
+        m_TargetAssemblyTypeName: GUI, Assembly-CSharp
+        m_MethodName: GoToMenu
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &39103492
@@ -532,8 +532,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 786171418}
-        m_TargetAssemblyTypeName: DifficulyMenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 786171419}
+        m_TargetAssemblyTypeName: GUI, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 5
         m_Arguments:
@@ -665,8 +665,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 786171418}
-        m_TargetAssemblyTypeName: DifficulyMenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 786171419}
+        m_TargetAssemblyTypeName: GUI, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 5
         m_Arguments:
@@ -728,6 +728,7 @@ GameObject:
   - component: {fileID: 786171415}
   - component: {fileID: 786171414}
   - component: {fileID: 786171418}
+  - component: {fileID: 786171419}
   m_Layer: 5
   m_Name: DifficultyMenuCanvas
   m_TagString: Untagged
@@ -830,6 +831,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf21f4c837807fb4fb2f497cff3177b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &786171419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786171413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ceb933a714eac4982e8f78db9d05d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuIdentifier: 0
 --- !u!1 &831124699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,8 +1477,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 786171418}
-        m_TargetAssemblyTypeName: DifficulyMenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 786171419}
+        m_TargetAssemblyTypeName: GUI, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 5
         m_Arguments:
