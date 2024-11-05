@@ -347,6 +347,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8617208981584926405, guid: 861d0041913d67246b828dc89889c230,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8885756204652020606, guid: 861d0041913d67246b828dc89889c230,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4814,6 +4819,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AnchorPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323680441177125833, guid: 50746aeac6ce2e548a715cefedee49ca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3055119943408477033, guid: 50746aeac6ce2e548a715cefedee49ca,
         type: 3}

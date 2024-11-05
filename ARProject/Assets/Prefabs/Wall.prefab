@@ -66,22 +66,22 @@ PrefabInstance:
     - target: {fileID: 3020502987615108183, guid: 66b034d207595e14f8cb453612f24cf0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3052761656571658621, guid: 66b034d207595e14f8cb453612f24cf0,
         type: 3}
       propertyPath: m_Extents.x
-      value: 0.625
+      value: 0.065
       objectReference: {fileID: 0}
     - target: {fileID: 3052761656571658621, guid: 66b034d207595e14f8cb453612f24cf0,
         type: 3}
       propertyPath: m_Extents.y
-      value: 0.2125
+      value: 0.0225
       objectReference: {fileID: 0}
     - target: {fileID: 3052761656571658621, guid: 66b034d207595e14f8cb453612f24cf0,
         type: 3}
       propertyPath: m_Extents.z
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

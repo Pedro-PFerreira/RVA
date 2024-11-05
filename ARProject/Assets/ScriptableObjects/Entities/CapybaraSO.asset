@@ -16,6 +16,6 @@ MonoBehaviour:
   maxHealth: 300
   damage: 14
   speed: 2
-  attackRange: 0.05
+  attackRange: 0.07
   attackCooldown: 0.5
   sightRange: 0.5

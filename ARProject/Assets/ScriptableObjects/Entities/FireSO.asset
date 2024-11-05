@@ -16,4 +16,4 @@ MonoBehaviour:
   damage: 3
   attackRange: 0.12
   attackCooldown: 0.1
-  duration: 5000
+  duration: 5
