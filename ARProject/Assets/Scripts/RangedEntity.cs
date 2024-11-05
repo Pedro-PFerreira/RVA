@@ -9,7 +9,10 @@ public class RangedEntity : Entity
     [SerializeField] private float projectileSpeed = 1f;
 
     public override void Attack() {
-        ThrowProjectile(transform.forward);
+        if (!isDead){
+            ThrowProjectile(transform.forward);
+        }
+            
     }
 
     public void ThrowProjectile(Vector3 dir) {

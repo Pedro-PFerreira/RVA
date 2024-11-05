@@ -19,6 +19,7 @@ public class Entity : MonoBehaviour {
     private float attackTimer;
     private NavMeshAgent navMeshAgent;
     public bool isEnemy = false;
+    public bool isDead = false;
 
     public void Awake() {
         attackTimer = 0;
@@ -59,11 +60,13 @@ public class Entity : MonoBehaviour {
     }
 
     public void TakeDamage(int damage) {
-
-        health -= damage;
+        
         if (health <= 0) {
             Die();
+            return;
         }
+
+        health -= damage;
 
         OnHPChanged?.Invoke(this, new OnHPChangedEventArgs {
             hpNormalized = (float)health / entitySO.maxHealth
@@ -71,6 +74,8 @@ public class Entity : MonoBehaviour {
     }
 
     public void Die() {
+
+        isDead = true;
         Debug.Log(entitySO.entityName + " died");
         // if (entitySO.entityName == "HolyBara"){
         //     Debug.Log("Game Over!");

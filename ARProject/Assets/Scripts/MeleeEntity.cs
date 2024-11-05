@@ -15,9 +15,8 @@ public class MeleeEntity : Entity
     }
 
     public override void Attack() {
-        if (target == null) return;
+        if (target == null || isDead) return;
 
-    
         target.TakeDamage(entitySO.damage);
     }
 
@@ -29,7 +28,7 @@ public class MeleeEntity : Entity
 
         foreach (Collider hit in hits) {
             if (hit.TryGetComponent<Entity>(out Entity otherEntity)) {
-                if (otherEntity == this) continue;
+                if (otherEntity == this || otherEntity.isDead || isDead) continue;
                 if (!(this.IsEnemy() ^ otherEntity.IsEnemy())) continue;
 
                 GetAnimator().SetBool("isEnemyInRange", true);
