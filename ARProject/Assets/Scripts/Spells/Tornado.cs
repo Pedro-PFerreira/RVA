@@ -15,6 +15,8 @@ public class Tornado : Spell {
         orbitSpeed *= transform.localScale.x;
         chaosFrequency *= transform.localScale.x;
         chaosAmplitude *= transform.localScale.x;
+
+        Destroy(gameObject, spellSO.duration);
     }
 
     private void Update() {

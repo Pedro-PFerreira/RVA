@@ -9,5 +9,5 @@ public class SpellSO : ScriptableObject
     public int damage;
     public float attackRange;	
     public float attackCooldown;
-    
+    public float duration;
 }

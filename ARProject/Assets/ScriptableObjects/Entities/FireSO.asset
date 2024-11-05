@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Fire
   damage: 20
-  speed: 10
   attackRange: 0.3
   attackCooldown: 0.1
+  duration: 5

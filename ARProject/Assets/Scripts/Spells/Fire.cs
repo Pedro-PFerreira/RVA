@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Fire : Spell
 {
+    private void Start() {
+        Destroy(gameObject, spellSO.duration);
+    }
+
     private void Update(){
         TryCast();
     }
