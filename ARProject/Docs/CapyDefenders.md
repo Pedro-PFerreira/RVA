@@ -56,8 +56,6 @@ In order to execute the project, it is only need to run the project's executable
 
 ## Features
 
-#TODO - Update this section with images.
-
 - The player can place troopers and spells up to 3 at a time, by using the respective markers;
 
 - The player can rotate the camera and see the game from different angles, by rotating the device;
@@ -73,7 +71,7 @@ In order to execute the project, it is only need to run the project's executable
 
 - The player can choose from three different difficulty levels that define the number of enemies spawned and their spawn speed. The player is prompted to choose the difficulty everytime they start a new game.
 
-- When a game ends, a new sceen is shown, indicating the win or loss of the player, wheter if the winning condition is verified or not. #TODO reescrever esta frase
+- When a game ends, a new sceen is shown, indicating the win or loss of the player, wheter if the winning condition is verified or not.
 
 <div style="texts-align: center;">
   <img src="./Images/Victory%20Menu.png" alt="Fig 4- Vicory screen" width="200"/>
