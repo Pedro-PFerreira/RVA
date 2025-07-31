@@ -2,9 +2,9 @@
 
 ## Group members
 
-- Lourenço Alexandre Correia Gonçalves (202004816, up202004816@up.pt);
-- Pedro Manuel Costa Aguiar Botelho Gomes (202006086, up202006086@up.pt);
-- Pedro Pereira Ferreira (202004986, up202004986@up.pt).
+- Lourenço Alexandre Correia Gonçalves (up202004816@up.pt);
+- Pedro Manuel Costa Aguiar Botelho Gomes (up202006086@up.pt);
+- Pedro Pereira Ferreira (up202004986@up.pt).
 
 ## Game Description
 
